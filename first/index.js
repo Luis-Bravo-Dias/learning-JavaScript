@@ -24,3 +24,9 @@ console.log(SukunaVictims);
 SukunaVictims[2] = 'Gojo';
 
 console.log(SukunaVictims);
+
+SukunaVictims[3] = 0.5;
+
+console.log(SukunaVictims);
+
+console.log(SukunaVictims.length);
