@@ -30,3 +30,11 @@ SukunaVictims[3] = 0.5;
 console.log(SukunaVictims);
 
 console.log(SukunaVictims.length);
+
+function domainExpasion(user)
+{
+    if (user == 'Sukuna')
+        console.log(user + ': Malevolous Kitchen');
+}
+
+domainExpasion('Sukuna');
