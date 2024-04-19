@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Bravo-Dias/learning-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luis-Bravo-Dias/learning-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Luis-Bravo-Dias/learning-JavaScript#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "description": ""
+}
