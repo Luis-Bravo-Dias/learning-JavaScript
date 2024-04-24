@@ -1,3 +1,5 @@
+import Dashboard from "./views/Dashboard.js";
+
 const navigateTo = url => {
     history.pushState(null, null, url);
     router();
@@ -5,9 +7,9 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        {path: "/", view: () => console.log("Viewing Dashboard")},
-        {path: "/posts", view: () => console.log("Viewing posts")},
-        {path: "/settings", view: () => console.log("Viewing settings")}
+        {path: "/", view: Dashboard },
+        //{path: "/posts", view: () => console.log("Viewing posts")},
+        //{path: "/settings", view: () => console.log("Viewing settings")}
     ];
 
     // test each route for potential match
@@ -27,9 +29,15 @@ const router = async () => {
         }
     }
 
+    const view = new match.route.view();
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
+
     console.log(match.route.view());
 
 };
+
+window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
