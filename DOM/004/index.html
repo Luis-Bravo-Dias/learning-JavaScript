@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text_color {
+            color:chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="header">HTML Header</h3>
+    
+    <p id="text_1">HTML Paragraph</p>
+    <p>Second Paragraph</p>
+    <p class="text_color">Third Paragraph</p>
+
+    <div class="text_color">
+        Text inside a div
+    </div>
+
+    <form action="" method="post">
+        <input type="text" name="text_user">
+    </form>
+
+    <script>
+        document.getElementById("header").innerText = "New Header";
+
+        console.log(document.getElementsByName("text_user"));
+        document.getElementsByName("text_user")[0].value = "John";
+
+        console.log(document.getElementsByTagName("p"));
+        document.getElementsByTagName("p")[0].innerText = "First Paragraph";
+
+        console.log(document.getElementsByClassName("text_color"));
+    </script>
+    
+</body>
+</html>
