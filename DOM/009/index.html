@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .news {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid rgb(150, 150, 150);
+            background-color: rgb(240,240,24);
+            border-radius: 10px;
+            box-shadow: 2px 2px 6x rgba(0,0,0,.5);
+            padding: 20px;
+            margin: 50px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <h1>Headline</h1>
+        <h3 id="summary">Very sad news</h3>
+        <img src="photo2.jpg" alt="">
+        <p>This news is very very sad</p>
+    </div>
+
+    <script>
+        let element = document.querySelector("h3");
+
+        if(element.hasAttribute('id')){
+            console.log("YES");
+            console.log(element.getAttribute("id"));
+        }
+
+        element.setAttribute("title", "Olaaaaa");
+
+        console.log(element.attributes);
+    </script>
+</body>
+</html>

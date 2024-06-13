@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="header">
+        This text is 
+        <i>
+            <u>important</u>
+        </i>
+    </h3>
+
+    <div class="news">
+        <h1>Headline 1</h1>
+        <p>Very big news</p>
+    </div>
+
+    <div>
+        <h2>Headline 2</h2>
+        <p>Not so big news</p>
+    </div>
+
+    <img src="photo1.jpg" alt="News" id="news-photo" onclick="changephoto()">
+
+    <script>
+        let element = document.querySelector("#header > i > u");
+        element.style.color = "red";
+        let headline = document.querySelector(".news > h1");
+        headline.innerHTML = "<u>Headline</u> 1";
+
+        let photo = document.querySelector("#news-photo");
+        function changephoto()
+        {
+                photo.src = "photo2.jpg";
+        }
+    </script>
+</body>
+</html>
