@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        .alert {
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(255,0,0);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>This is a paragraph!</p>
+    </div>
+
+    <button onclick="execute()">Click!</button>
+
+    <script>
+        
+        function execute()
+        {
+            let new_element = document.createElement("p");
+            new_element.className = "alert";
+            new_element.innerText = "ATTENTION!!!!";
+
+            let element = document.querySelector(".box");
+            element.appendChild(new_element);
+            element.appendChild(new_element.cloneNode(true));
+        }
+
+    </script>
+</body>
+</html>
