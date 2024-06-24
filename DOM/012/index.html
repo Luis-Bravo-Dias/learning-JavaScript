@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+		p{
+			background-color: green;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		DIV inside
+	</div>
+
+	<script>
+		let div = document.querySelector(".box")
+
+		// //insertAdjacentText
+		// div.insertAdjacentText('beforebegin', 'Before the DIV')
+		// div.insertAdjacentText('afterbegin', 'inside the div, but before the content')
+		// div.insertAdjacentText('beforeend', 'inside the div, but after the end')
+		// div.insertAdjacentText('afterend', 'after the div')
+
+		// //insertAdjacentHTML
+		// div.insertAdjacentHTML("beforebegin", "<p>Before the DIV</p>")
+		// div.insertAdjacentHTML('afterbegin', '<p>inside the div, but before the content</p>')
+		// div.insertAdjacentHTML('beforeend', '<p>inside the div, but after the end</p>')
+		// div.insertAdjacentHTML('afterend', '<p>after the div</p>')
+
+		//insertAdjacentHTML
+		let p1 = document.createElement("p")
+		let p2 = document.createElement("p")
+		let p3 = document.createElement("p")
+		let p4 = document.createElement("p")
+
+		p1.innerText = "Hello World"
+		p2.innerText = "Coockie"
+		p3.innerText = "Banana"
+		p4.innerText = "Goodnight World"
+
+		div.insertAdjacentElement('beforebegin', p1)
+		div.insertAdjacentElement('afterbegin', p2)
+		div.insertAdjacentElement('beforeend', p3)
+		div.insertAdjacentElement('afterend', p4)
+
+	</script>
+</body>
+</html>

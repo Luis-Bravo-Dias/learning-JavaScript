@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+		p{
+			background-color: red;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		DIV inside
+	</div>
+
+	<script>
+		let	div = document.querySelector(".box")
+
+		// //text before the div
+		// div.before('AAAAA')
+
+		// //inside the div, but before the content
+		// div.prepend('BBBBB')
+
+		// //inside the div, but after the end
+		// div.append('CCCCCC')
+
+		// //after the div
+		// div.after('DDDDDDD')
+
+		let p1 = document.createElement("p")
+		let p2 = document.createElement("p")
+		let p3 = document.createElement("p")
+		let p4 = document.createElement("p")
+
+		p1.innerText = "Hello World"
+		p2.innerText = "Coockie"
+		p3.innerText = "Banana"
+		p4.innerText = "Goodnight World"
+		
+		div.before(p1)
+		div.prepend(p2)
+		div.append(p3)
+		div.after(p4)
+
+	</script>
+</body>
+</html>

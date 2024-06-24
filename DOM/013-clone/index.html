@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+
+	<div id="box" class="box">
+		<p>Paragraph in DIV</p>
+		<ul>
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+		</ul>
+	</div>
+
+	<script>
+		
+		//clone
+		let divEmpty = document.querySelector("#box").cloneNode(false)
+
+		document.querySelector("#box").after(divEmpty);
+
+		let divFull= document.querySelector("#box").cloneNode(true)
+
+		document.querySelector("#box").after(divFull);
+
+
+	</script>
+	
+</body>
+</html>
